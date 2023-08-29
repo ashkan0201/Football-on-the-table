@@ -45,5 +45,14 @@ while running:
     # پس زمینه
     window.fill((48, 52, 69))
 
+    # ترسیم المان ها
+    pygame.draw.rect(window, (2, 170, 255), (player1_pos[0], player1_pos[1], PLAYER_WIDTH, PLAYER_HEIGHT))
+    pygame.draw.rect(window, (255, 0, 81), (player2_pos[0], player2_pos[1], PLAYER_WIDTH, PLAYER_HEIGHT))
+
+    pygame.draw.circle(window, (221, 144, 254), (ball_pos[0], ball_pos[1]), BALL_RADIUS)
+    
+    pygame.draw.aaline(window, (2, 202, 151), (WIDTH // 2, 0), (WIDTH // 2, HEIGHT))
+    
+
 #ّ پایان بازی
 pygame.quit()
