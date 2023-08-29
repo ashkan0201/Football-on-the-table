@@ -52,6 +52,17 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
+        
+        # درصورت زدن دکمه اینتر بازی مجدد ایجاد شود
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RETURN:
+                # شروع مجدد بازی
+                player1_score = 0
+                player2_score = 0
+                player1_pos = [10, HEIGHT // 2 - PLAYER_HEIGHT // 2]
+                player2_pos = [WIDTH - 10 - PLAYER_WIDTH, HEIGHT // 2 - PLAYER_HEIGHT // 2]
+                ball_pos = [WIDTH // 2, HEIGHT // 2]
+                ball_dir = [-1, 1]   
     
     # شرایط و محدودیت های حرکتی بازیکن سمت چپ
     keys = pygame.key.get_pressed()
