@@ -89,6 +89,9 @@ while running:
     ball_pos[0] += BALL_SPEED_X * ball_dir[0]
     ball_pos[1] += BALL_SPEED_Y * ball_dir[1]
 
+    # برخورد توپ با دیوارها
+    if ball_pos[1] <= 0 or ball_pos[1] >= HEIGHT - BALL_RADIUS:
+        ball_dir[1] = -ball_dir[1]
     # پس زمینه
     window.fill((48, 52, 69))
 
