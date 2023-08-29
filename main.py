@@ -65,6 +65,11 @@ while running:
     player1_pos[1] += player1_speed
     player2_pos[1] += player2_speed
 
+    # محدود کردن بازیکن سمت جپ در نیمه خود
+    if player1_pos[1] < 0:
+        player1_pos[1] = 0
+    elif player1_pos[1] > HEIGHT - PLAYER_HEIGHT:
+        player1_pos[1] = HEIGHT - PLAYER_HEIGHT
     # پس زمینه
     window.fill((48, 52, 69))
 
