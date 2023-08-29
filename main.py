@@ -18,6 +18,10 @@ PLAYER_HEIGHT = 60
 # ابعاد توپ
 BALL_RADIUS = 6
 
+# تعداد گل هر بازیکن
+player1_score = 0
+player2_score = 0
+
 # مقدار اولیه Pygame
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
