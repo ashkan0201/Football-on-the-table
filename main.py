@@ -18,6 +18,10 @@ PLAYER_HEIGHT = 60
 # سرعت بازیکنان
 PLAYER_SPEED = 5
 
+# مقدار اولیه سرعت بازیکنان
+player1_speed = 0
+player2_speed = 0
+
 # مکان بازیکنان
 player1_pos = [10, HEIGHT // 2 - PLAYER_HEIGHT // 2]
 player2_pos = [WIDTH - 10 - PLAYER_WIDTH, HEIGHT // 2 - PLAYER_HEIGHT // 2]
@@ -84,7 +88,7 @@ while running:
     # حرکت توپ
     ball_pos[0] += BALL_SPEED_X * ball_dir[0]
     ball_pos[1] += BALL_SPEED_Y * ball_dir[1]
-    
+
     # پس زمینه
     window.fill((48, 52, 69))
 
