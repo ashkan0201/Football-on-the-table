@@ -101,6 +101,13 @@ while running:
     if ball_pos[1] <= 0 or ball_pos[1] >= HEIGHT - BALL_RADIUS:
         ball_dir[1] = -ball_dir[1]
 
+    # امتیازدهی
+    if ball_pos[0] < 0:
+        # بازیکن 2 امتیاز می گیرد
+        player2_score += 1
+        ball_pos = [WIDTH // 2, HEIGHT // 2]
+        ball_dir = [-1, 1]
+
     # پس زمینه
     window.fill((48, 52, 69))
 
