@@ -60,6 +60,9 @@ while running:
     window.blit(player1_score_text, (WIDTH // 2 - 50, 10))
     window.blit(player2_score_text, (WIDTH // 2 + 40, 10))
     
+    # بروزرسانی پنجره
+    pygame.display.flip()
+    clock.tick(60)
 
 #ّ پایان بازی
 pygame.quit()
