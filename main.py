@@ -11,6 +11,10 @@ from pygame.locals import *
 WIDTH = 800
 HEIGHT = 400
 
+# ابعاد بازیکنان
+PLAYER_WIDTH = 10
+PLAYER_HEIGHT = 60
+
 # مقدار اولیه Pygame
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
