@@ -42,5 +42,8 @@ while running:
         if event.type == QUIT:
             running = False
 
+    # پس زمینه
+    window.fill((48, 52, 69))
+
 #ّ پایان بازی
 pygame.quit()
