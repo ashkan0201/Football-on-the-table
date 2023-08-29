@@ -45,7 +45,7 @@ while running:
         if event.type == QUIT:
             running = False
     
-    #شرایط و محدودیت های حرکتی بازیکن سمت چپ
+    # شرایط و محدودیت های حرکتی بازیکن سمت چپ
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         player1_speed = -PLAYER_SPEED
@@ -54,7 +54,16 @@ while running:
     else:
         player1_speed = 0
 
+    # شرایط و محدودیت های حرکتی بازیکن سمت راست
+    if keys[pygame.K_UP]:
+        player2_speed = -PLAYER_SPEED
+    elif keys[pygame.K_DOWN]:
+        player2_speed = PLAYER_SPEED
+    else:
+        player2_speed = 0
+
     player1_pos[1] += player1_speed
+    player2_pos[1] += player2_speed
 
     # پس زمینه
     window.fill((48, 52, 69))
