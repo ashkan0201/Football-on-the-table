@@ -18,6 +18,9 @@ PLAYER_HEIGHT = 60
 # ابعاد توپ
 BALL_RADIUS = 6
 
+# سرعت بازیکنان
+PLAYER_SPEED = 5
+
 # تعداد گل هر بازیکن
 player1_score = 0
 player2_score = 0
@@ -41,6 +44,17 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
+    
+    #شرایط و محدودیت های حرکتی بازیکن سمت چپ
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_w]:
+        player1_speed = -PLAYER_SPEED
+    elif keys[pygame.K_s]:
+        player1_speed = PLAYER_SPEED
+    else:
+        player1_speed = 0
+
+    player1_pos[1] += player1_speed
 
     # پس زمینه
     window.fill((48, 52, 69))
