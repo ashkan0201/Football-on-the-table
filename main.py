@@ -15,23 +15,27 @@ HEIGHT = 400
 PLAYER_WIDTH = 10
 PLAYER_HEIGHT = 60
 
-# ابعاد توپ
-BALL_RADIUS = 6
-
 # سرعت بازیکنان
 PLAYER_SPEED = 5
-
-# تعداد گل هر بازیکن
-player1_score = 0
-player2_score = 0
 
 # مکان بازیکنان
 player1_pos = [10, HEIGHT // 2 - PLAYER_HEIGHT // 2]
 player2_pos = [WIDTH - 10 - PLAYER_WIDTH, HEIGHT // 2 - PLAYER_HEIGHT // 2]
 
+# ابعاد توپ
+BALL_RADIUS = 6
+
 # مکان توپ
 ball_pos = [WIDTH // 2, HEIGHT // 2]
-ball_pos = [WIDTH // 2, HEIGHT // 2]
+ball_dir = [-1, 1]
+
+# سرعت توپ
+BALL_SPEED_X = 6
+BALL_SPEED_Y = 6
+
+# تعداد گل هر بازیکن
+player1_score = 0
+player2_score = 0
 
 # مقدار اولیه Pygame
 pygame.init()
@@ -77,15 +81,17 @@ while running:
     elif player2_pos[1] > HEIGHT - PLAYER_HEIGHT:
         player2_pos[1] = HEIGHT - PLAYER_HEIGHT
 
+    # حرکت توپ
+    ball_pos[0] += BALL_SPEED_X * ball_dir[0]
+    ball_pos[1] += BALL_SPEED_Y * ball_dir[1]
+    
     # پس زمینه
     window.fill((48, 52, 69))
 
     # ترسیم المان ها
     pygame.draw.rect(window, (2, 170, 255), (player1_pos[0], player1_pos[1], PLAYER_WIDTH, PLAYER_HEIGHT))
     pygame.draw.rect(window, (255, 0, 81), (player2_pos[0], player2_pos[1], PLAYER_WIDTH, PLAYER_HEIGHT))
-
     pygame.draw.circle(window, (221, 144, 254), (ball_pos[0], ball_pos[1]), BALL_RADIUS)
-    
     pygame.draw.aaline(window, (2, 202, 151), (WIDTH // 2, 0), (WIDTH // 2, HEIGHT))
 
     # نمایش امتیازها
