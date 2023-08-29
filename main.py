@@ -89,9 +89,18 @@ while running:
     ball_pos[0] += BALL_SPEED_X * ball_dir[0]
     ball_pos[1] += BALL_SPEED_Y * ball_dir[1]
 
+    # برخورد توپ با بازیکنان
+    if ball_pos[0] <= player1_pos[0] + PLAYER_WIDTH and \
+            player1_pos[1] <= ball_pos[1] <= player1_pos[1] + PLAYER_HEIGHT:
+        ball_dir[0] = 1
+    elif ball_pos[0] >= player2_pos[0] - BALL_RADIUS and \
+            player2_pos[1] <= ball_pos[1] <= player2_pos[1] + PLAYER_HEIGHT:
+        ball_dir[0] = -1
+
     # برخورد توپ با دیوارها
     if ball_pos[1] <= 0 or ball_pos[1] >= HEIGHT - BALL_RADIUS:
         ball_dir[1] = -ball_dir[1]
+
     # پس زمینه
     window.fill((48, 52, 69))
 
