@@ -15,6 +15,9 @@ HEIGHT = 400
 PLAYER_WIDTH = 10
 PLAYER_HEIGHT = 60
 
+# ابعاد توپ
+BALL_RADIUS = 6
+
 # مقدار اولیه Pygame
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
