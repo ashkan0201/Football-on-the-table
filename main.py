@@ -52,6 +52,13 @@ while running:
     pygame.draw.circle(window, (221, 144, 254), (ball_pos[0], ball_pos[1]), BALL_RADIUS)
     
     pygame.draw.aaline(window, (2, 202, 151), (WIDTH // 2, 0), (WIDTH // 2, HEIGHT))
+
+    # نمایش امتیازها
+    font = pygame.font.Font(None, 36)
+    player1_score_text = font.render(str(player1_score), True, (2, 170, 255))
+    player2_score_text = font.render(str(player2_score), True, (255, 0, 81))
+    window.blit(player1_score_text, (WIDTH // 2 - 50, 10))
+    window.blit(player2_score_text, (WIDTH // 2 + 40, 10))
     
 
 #ّ پایان بازی
