@@ -22,6 +22,14 @@ BALL_RADIUS = 6
 player1_score = 0
 player2_score = 0
 
+# مکان بازیکنان
+player1_pos = [10, HEIGHT // 2 - PLAYER_HEIGHT // 2]
+player2_pos = [WIDTH - 10 - PLAYER_WIDTH, HEIGHT // 2 - PLAYER_HEIGHT // 2]
+
+# مکان توپ
+ball_pos = [WIDTH // 2, HEIGHT // 2]
+ball_pos = [WIDTH // 2, HEIGHT // 2]
+
 # مقدار اولیه Pygame
 pygame.init()
 window = pygame.display.set_mode((WIDTH, HEIGHT))
