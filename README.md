@@ -15,11 +15,6 @@ This game is made from the "pygame" library and you need to install it to run th
 
 **You must fully protect your range.**
 
-## Install "pygame"
-```bash
-$ pip install pygame
-```
-Try to make sure that the package manager is updated !
 
 ## How to play 
 
@@ -35,18 +30,14 @@ And for the player on the left, **"W"** and **"S"** keys should be used to move.
 
 **S key:** move the character down
 
-## Download pip
-If you don't have **pip** manager package.
-
-CLICK ON
-[Download for pip](https://bootstrap.pypa.io/get-pip.py) 
-
-Copy the script and save it in an "example.py" file
-
+## Installation
 ```bash
-$ python3 example.py
+$ pip install pygame
 ```
-Then you can install any package !
+or
+```bash
+pip install -r requirements.txt
+```
 
 ## Partnerships
 
